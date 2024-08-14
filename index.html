@@ -25,34 +25,34 @@
             <p>You <em>know</em> you want to.</p>
         </div>
         <div id="form-div">
-            <form>
+            <form id="signup">
                 <h2 id="form-head">Let's do this!</h2>
                 <section>
                     <div id="left-column">
                         <label for="fname">FIRST NAME</label>
-                        <input type="text" name="" id="fname">
+                        <input type="text" name="" id="fname" required>
                         <output id="fname-out"></output>
 
                         <label for="mail">EMAIL</label>
-                        <input type="email" id="mail" name="mail">
+                        <input type="email" id="mail" name="mail" pattern="[A-Za-z0-9\.]+@[A-z]+\.[a-z]+"required>
                         <output id="mail-out"></output>
 
                         <label for="pass">PASSWORD</label>
-                        <input type="password" id="pass">
+                        <input type="password" id="pass" required>
                         <output id="pass-out"></output>
                     </div>
 
                     <div id="right-column">
                         <label for="lname">LAST NAME</label>
-                        <input type="text" name="" id ="lname">
+                        <input type="text" name="" id ="lname" required>
                         <output id="lname-out"></output>
 
                         <label for="number">PHONE NUMBER</label>
-                        <input type="tel" id="number">
+                        <input type="tel" id="number" required>
                         <output id="number-out"></output>
 
                         <label for="confirm-pass">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-pass">
+                        <input type="password" id="confirm-pass" required>
                         <output id="conf-pass-out"></output>
                     </div>
                 </section>
@@ -60,7 +60,7 @@
         </div>
 
         <div id="create-button">
-            <button>Create Account</button>
+            <button type="submit" form="signup">Create Account</button>
             <p>Already got an account? <a>Log in</a></p>
         </div>
 
