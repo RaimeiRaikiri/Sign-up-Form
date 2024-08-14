@@ -68,7 +68,22 @@ footer {
 
 #top-text {
     height: 35vh;
+    width: 100%;
     margin-left: 3vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.top {
+    width: 60%;
+    margin-bottom: 3vh;
+}
+.bottom {
+    margin-bottom: 6vh;
 }
 
 #form-div {
@@ -123,5 +138,4 @@ h2 {
 #create-button {
     height: 25vh;
     margin-left: 3vw;
-
 }
