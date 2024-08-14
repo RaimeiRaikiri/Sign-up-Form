@@ -59,13 +59,13 @@ footer {
 }
 
 /* Text side */
-
 #text-div {
     display: flex;
     flex-direction: column;
     width: 70vw;
 }
 
+/* Top text section */
 #top-text {
     height: 35vh;
     width: 100%;
@@ -86,6 +86,7 @@ footer {
     margin-bottom: 6vh;
 }
 
+/* Form section */
 #form-div {
     height: 30vh;
     width: 100%;
@@ -134,8 +135,31 @@ h2 {
     margin-top: 10px;
 }
 
-
+/* Button section */
 #create-button {
     height: 25vh;
+    width: 100%;
     margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    background-color: #596D48;
+    color: white;
+    font-size: 0.95rem;
+
+    border-radius: 8px;
+    border: none;
+
+    width: clamp(50px,40vw,200px);
+    height: clamp(30px, 10vh, 40px);
+
+    margin-top: 4vh;
+}
+#create-button > p {
+    font-size: 1rem;
+    margin-top: 4vh;
+}
+a {
+    color: #596D48;
 }
