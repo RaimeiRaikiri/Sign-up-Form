@@ -2,6 +2,7 @@
     font-family: norse;
     src: url('../Sign-up-Form/font/Norse-Bold.woff2') format('woff2');
 }
+
 * {  
     padding: 0;  
     margin: 0;  
@@ -12,6 +13,8 @@ body {
     height: 100vh;
     display: flex;
 }
+
+/* Image side */
 #img-div {
     display: flex;
     flex-direction: column;
@@ -23,10 +26,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-#text-div {
-    display: flex;
-    flex-direction: column;
 }
 #img {
     width: 21.32%;
@@ -41,11 +40,11 @@ body {
     margin-top: 20vh;
     width: 100%;
     height: 15vh;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     background-color: rgb(0,0,0,.5);
     color: white;
     font-family: norse;
@@ -57,4 +56,63 @@ h1 {
 footer {
     margin-bottom: 5vh;
     color: white;
+}
+
+/* Text side */
+
+#text-div {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+#top-text {
+    height: 35vh;
+    margin-left: 3vw;
+}
+
+#form-div {
+    height: 30vh;
+    width: 100%;
+    padding-left: 3vw;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+}
+#left-column, #right-column , form{
+    display: flex;
+    flex-direction: column;
+}
+section {
+    display: flex;
+    width: 100%;
+}
+#right-column {
+    margin-left: 5vw;
+    width: 30%;
+}
+#left-column {
+    width: 30%;
+}
+input {
+    height: 1.7rem;
+    border: 0.25px solid grey;
+    border-radius: 4px;
+}
+label {
+    margin-top: 10px;
+}
+output {
+    width: 100%;
+    height: 10px;
+    font-size: 0.75rem;
+}
+h2 {
+    margin-top: 10px;
+}
+
+
+#create-button {
+    height: 25vh;
+    margin-left: 3vw;
+
 }
