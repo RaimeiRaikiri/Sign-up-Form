@@ -4,7 +4,6 @@ const confPassword = document.querySelector('#confirm-pass');
 const password = document.querySelector('#pass');
 
 const passwordOutput = document.querySelector('#pass-out');
-let passwordMatch = false;
 
 function CheckPasswordsMatch(password, confPassword)
 {
@@ -25,14 +24,12 @@ password.addEventListener('input', () => {
     }
     else if (CheckPasswordsMatch(password, confPassword))
     {
-        passwordMatch = true;
         passwordOutput.textContent = '';
         password.removeAttribute('id');
         confPassword.removeAttribute('id');
     }
     else
     {
-        passwordMatch = false;
         passwordOutput.textContent = '* Passwords do not match';
         password.setAttribute('id', 'invalidpass');
         confPassword.setAttribute('id', 'invalidpass');
@@ -45,7 +42,6 @@ confPassword.addEventListener('input', () => {
         }
     else if (CheckPasswordsMatch(password, confPassword))
         {
-            passwordMatch = true;
             passwordOutput.textContent = '';
             password.removeAttribute('id');
             confPassword.removeAttribute('id');
