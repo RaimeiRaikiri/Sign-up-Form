@@ -44,7 +44,6 @@ confPassword.addEventListener('input', () => {
         }
         else
         {
-            passwordMatch = false;
             passwordOutput.textContent = '* Passwords do not match';
             password.setAttribute('id', 'invalidpass');
             confPassword.setAttribute('id', 'invalidpass');
@@ -59,5 +58,31 @@ form.addEventListener('submit', (event) => {
     if (!passwordMatch)
     {
         event.preventDefault();
+    }
+})
+
+const number = document.querySelector('#number');
+const numberOutput = document.querySelector('#number-out');
+
+function CheckIfInputIsShort(input, minLength)
+{
+    if (input.value.toString().length < minLength)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+number.addEventListener('input', () => {
+    if (CheckIfInputIsShort(number, 11))
+    {
+        numberOutput.textContent = '* Number is too short, input should be 11 digits';
+    }
+    else
+    {
+        numberOutput.textContent = '';
     }
 })
