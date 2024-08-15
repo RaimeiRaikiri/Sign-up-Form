@@ -135,7 +135,9 @@ output {
 h2 {
     margin-top: 10px;
 }
-
+#invalidpass {
+    border: 1px solid red;
+}
 /* Button section */
 #create-button {
     height: 25vh;

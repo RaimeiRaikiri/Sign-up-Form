@@ -23,11 +23,15 @@ password.addEventListener('input', () => {
     {
         passwordMatch = true;
         passwordOutput.textContent = '';
+        password.removeAttribute('id');
+        confPassword.removeAttribute('id');
     }
     else
     {
         passwordMatch = false;
         passwordOutput.textContent = '* Passwords do not match';
+        password.setAttribute('id', 'invalidpass');
+        confPassword.setAttribute('id', 'invalidpass');
     }
 });
 confPassword.addEventListener('input', () => {
@@ -35,11 +39,15 @@ confPassword.addEventListener('input', () => {
         {
             passwordMatch = true;
             passwordOutput.textContent = '';
+            password.removeAttribute('id');
+            confPassword.removeAttribute('id');
         }
         else
         {
             passwordMatch = false;
             passwordOutput.textContent = '* Passwords do not match';
+            password.setAttribute('id', 'invalidpass');
+            confPassword.setAttribute('id', 'invalidpass');
         }
 });
 
