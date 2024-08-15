@@ -24,35 +24,37 @@
             </p>
             <p class="bottom">You <em>know</em> you want to.</p>
         </div>
+
         <div id="form-div">
             <form id="signup">
                 <h2 id="form-head">Let's do this!</h2>
                 <section>
                     <div id="left-column">
                         <label for="fname">FIRST NAME</label>
-                        <input type="text" name="" id="fname" required>
+                        <input type="text" name="" id="fname" pattern="[^0-9]" required>
                         <output id="fname-out"></output>
 
                         <label for="mail">EMAIL</label>
-                        <input type="email" id="mail" name="mail" pattern="[A-Za-z0-9\.]+@[A-z]+\.[a-z]+"required>
+                        <input type="email" id="mail" name="mail" pattern="[A-Za-z0-9\.]+@[A-z]+\.[a-z]+" placeholder="name@example.com" required>
                         <output id="mail-out"></output>
 
                         <label for="pass">PASSWORD</label>
-                        <input type="password" id="pass" required>
+                        <input type="password" id="pass" placeholder="password" required>
                         <output id="pass-out"></output>
                     </div>
 
                     <div id="right-column">
                         <label for="lname">LAST NAME</label>
-                        <input type="text" name="" id ="lname" required>
+                        <input type="text" name="" id ="lname" pattern="[^0-9]" required>
                         <output id="lname-out"></output>
 
                         <label for="number">PHONE NUMBER</label>
-                        <input type="tel" id="number" required>
+                        <!-- Pattern for a UK phone number without spaces or +44-->
+                        <input type="tel" id="number" pattern="[0-9]{11}" placeholder="07334758960" required>
                         <output id="number-out"></output>
 
                         <label for="confirm-pass">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-pass" required>
+                        <input type="password" id="confirm-pass" minlength="8" placeholder="password" required>
                         <output id="conf-pass-out"></output>
                     </div>
                 </section>
