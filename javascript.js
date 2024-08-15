@@ -64,7 +64,7 @@ form.addEventListener('submit', (event) => {
 const number = document.querySelector('#number');
 const numberOutput = document.querySelector('#number-out');
 
-function CheckIfInputIsShort(input, minLength)
+function IsTooShort(input, minLength)
 {
     if (input.value.toString().length < minLength)
     {
@@ -76,10 +76,37 @@ function CheckIfInputIsShort(input, minLength)
     }
 }
 
+function IsTooLong(input, maxLength)
+{
+    if (input.value.toString().length > maxLength)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function IsNumeric(input)
+{
+    const RE = /[0-9]+/;
+    let val = RE.test(input.value.toString());
+    return val
+}
+
 number.addEventListener('input', () => {
-    if (CheckIfInputIsShort(number, 11))
+    if (!IsNumeric(number))
+    {
+        numberOutput.textContent = '* Input entered is not a number';
+    }
+    else if (IsTooShort(number, 11))
     {
         numberOutput.textContent = '* Number is too short, input should be 11 digits';
+    }
+    else if (IsTooShort(number, 11))
+    {
+        numberOutput = '* Number is too long, input should be 11 digits';
     }
     else
     {
