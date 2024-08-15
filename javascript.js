@@ -61,8 +61,13 @@ form.addEventListener('submit', (event) => {
     }
 })
 
+// Telephone number confirmation
+
 const number = document.querySelector('#number');
 const numberOutput = document.querySelector('#number-out');
+
+// Too short and long functions are necessary as they have not been given min and max lengths in the html
+// Made scalable for other inputs confirmation
 
 function IsTooShort(input, minLength)
 {
@@ -92,10 +97,11 @@ function IsNumeric(input)
 {
     const RE = /[0-9]+/;
     let val = RE.test(input.value.toString());
-    return val
+    return val;
 }
 
 number.addEventListener('input', () => {
+    // Used ! IsNumeric as it returns true when numeric but we need to find when it is not numeric
     if (!IsNumeric(number))
     {
         numberOutput.textContent = '* Input entered is not a number';
@@ -104,9 +110,9 @@ number.addEventListener('input', () => {
     {
         numberOutput.textContent = '* Number is too short, input should be 11 digits';
     }
-    else if (IsTooShort(number, 11))
+    else if (IsTooLong(number, 11))
     {
-        numberOutput = '* Number is too long, input should be 11 digits';
+        numberOutput.textContent = '* Number is too long, input should be 11 digits';
     }
     else
     {
