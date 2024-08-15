@@ -17,9 +17,13 @@ function CheckPasswordsMatch(password, confPassword)
     };
 };
 
-// Do the match check when an input is put into either field
+// Do the match and tooShort check when an input is put into either field
 password.addEventListener('input', () => {
-    if (CheckPasswordsMatch(password, confPassword))
+    if (IsTooShort(password, 8))
+    {
+        passwordOutput.textContent = '* Password too short, 8 character minimum';
+    }
+    else if (CheckPasswordsMatch(password, confPassword))
     {
         passwordMatch = true;
         passwordOutput.textContent = '';
@@ -35,7 +39,11 @@ password.addEventListener('input', () => {
     }
 });
 confPassword.addEventListener('input', () => {
-    if (CheckPasswordsMatch(password, confPassword))
+    if (IsTooShort(password, 8))
+        {
+            passwordOutput.textContent = '* Password too short, 8 character minimum';
+        }
+    else if (CheckPasswordsMatch(password, confPassword))
         {
             passwordMatch = true;
             passwordOutput.textContent = '';
