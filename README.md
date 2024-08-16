@@ -17,7 +17,7 @@ This website is not responsively designed - yet!
 
 This website is a project designed by the people at 'The Odin Project' - They tasked me with replicating this website design using what I have learned in previous projects and self learning:
 
-![alt text](/Sign-up-Form/img/sign-up-form-img.png "Title")
+![Target image the website is based upon](./img/sign-up-form-img.png "Odin Sign Up Form")
     
 For those who want to checkout the project here is a link - [Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
 
