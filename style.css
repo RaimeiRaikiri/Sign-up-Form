@@ -112,13 +112,14 @@ section {
 input {
     height: 1.7rem;
     border-radius: 4px;
+    border: 1px solid rgb(128,128,128);
     padding: 8px;
     font-size: 0.90rem;
 }
-input:valid {
+input:user-valid {
     border: 1px solid green;
 }
-input:invalid {
+input:user-invalid {
     border: 1px solid red;
 }
 label {
